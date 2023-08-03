@@ -38,7 +38,7 @@ const SpotifyApp = () => {
   
       if (hashParams.access_token) {
         saveTokenToLocalStorage(hashParams.access_token);
-        navigate(`/artist?access_token=${hashParams.access_token}`);
+        navigate(`/menu`);
       }
     };
     

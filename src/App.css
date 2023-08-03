@@ -1,0 +1,187 @@
+.app {
+  background-color: #1d1d1d;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content button {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+}
+
+.footer-content button::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1db954;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.footer-content button:hover::after {
+  transform: scaleX(1);
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.most-played-container {
+  text-align: center;
+}
+
+.most-played-container img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+h2,
+h3,
+p,
+button {
+  margin: 10px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-container button {
+  background-color: #1db954;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #1db954;
+  margin-top: 20px;
+}
+
+.home-container button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-description {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1d1d1d;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ios-back-button {
+  position: absolute;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1d1d1d;
+  color: #e6e6e6;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ios-back-button:hover {
+  color: #ffffff;
+}
+
+.app-description h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.app-description h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.app-description p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-container button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  outline: none;
+}
+
+.menu-container button:hover {
+  background-color: white;
+  color: #1d1d1d;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.artist-page-container {
+  text-align: center;
+}
+
+.artist-page-container img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.artist-page-container h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.artist-page-container p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}

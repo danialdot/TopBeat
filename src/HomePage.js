@@ -6,8 +6,8 @@ import "./App.css";
 const SpotifyApp = () => {
   const navigate = useNavigate();
 
-  const clientId = "YOUR_SPOTIFY_CLIENT_ID";
-  const redirectUri = "http://localhost:3000/";
+  const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID || "YOUR_DEFAULT_CLIENT_ID";
+  const redirectUri = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || "http://localhost:3000/";
 
   const getTokenFromLocalStorage = () => {
     return localStorage.getItem("spotify_access_token");

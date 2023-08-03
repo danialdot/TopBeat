@@ -1,8 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./App.css";
 
-const MenuPage = () => {
+const HomePage = () => {
   const navigate = useNavigate();
 
   const navigateToArtistPage = () => {
@@ -15,7 +14,7 @@ const MenuPage = () => {
 
   return (
     <div className="app-container">
-      <div className="menu-container">
+      <div className="home-container">
         <button onClick={navigateToArtistPage}>Artist</button>
         <button onClick={navigateToSongPage}>Song</button>
       </div>
@@ -23,4 +22,4 @@ const MenuPage = () => {
   );
 };
 
-export default MenuPage;
+export default HomePage;

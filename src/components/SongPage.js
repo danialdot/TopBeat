@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ArrowBackIos } from "@mui/icons-material";
 
-import "./App.css";
-
 const SongPage = () => {
   const navigate = useNavigate();
   const [mostPlayedSong, setMostPlayedSong] = useState(null);

@@ -5,7 +5,7 @@ Discover your 🔝 song and 🎤 artist with our music app! Connect your 🎧 Sp
 ## 🚀 Quick Start
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/topbeat.git
+git clone https://github.com/danialdot/topbeat.git
 cd topbeat
 ```
 
@@ -16,7 +16,7 @@ npm install
 
 Add your Spotify Client ID:
 
-Open src/Home.js. Replace 'YOUR_SPOTIFY_CLIENT_ID' with your actual Spotify App Client ID.
+Open src/components/LoginPage.js. Replace 'YOUR_SPOTIFY_CLIENT_ID' with your actual Spotify App Client ID.
 
 
 Run the app:

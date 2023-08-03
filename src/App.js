@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 
-import HomePage from "./HomePage";
-import SongPage from "./SongPage";
-import ArtistPage from "./ArtistPage";
-import MenuPage from "./MenuPage";
+import LoginPage from "./components/LoginPage";
+import SongPage from "./components/SongPage";
+import ArtistPage from "./components/ArtistPage";
+import HomePage from "./components/HomePage";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -53,10 +53,10 @@ const App = () => {
       <Router>
         <div className="content">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<LoginPage />} />
             <Route path="/song" element={<SongPage />} />
             <Route path="/artist" element={<ArtistPage />} />
-            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/home" element={<HomePage />} />
           </Routes>
         </div>
         <nav>

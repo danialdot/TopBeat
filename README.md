@@ -3,10 +3,10 @@
 
 # Screenshots:
 <p float="left">
-  <img src="./screenshots/img0.png" width="100" />
-  <img src="./screenshots/img1.png" width="100" />
-  <img src="./screenshots/img2.png" width="100" /> 
-  <img src="./screenshots/img3.png" width="100" />
+  <img src="./screenshots/img0.png" width="250" />
+  <img src="./screenshots/img1.png" width="250" />
+  <img src="./screenshots/img2.png" width="250" /> 
+  <img src="./screenshots/img3.png" width="250" />
 </p>
 
 Discover your 🔝 song and 🎤 artist with our music app! Connect your 🎧 Spotify account, and we'll show your most-played track. 💡 Stylish. Simple. Start listening! 🎶

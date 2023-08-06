@@ -10,6 +10,16 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HelmetProvider>
     <Helmet>
+      <meta charSet="utf-8" />
+      <meta property="og:title" content="TopBeat - Discover your top song and artist" />
+      <meta
+        property="og:description"
+        content="Connect your Spotify account to TopBeat and discover your most-played track and artist."
+      />
+      <meta property="og:image" content="https://topbeat.danials.space/og-image.png" />
+      <meta property="og:url" content="https://topbeat.danials.space" />
+      <meta property="og:type" content="website" />
+
       <title>TopBeat - Discover your top song and artist</title>
     </Helmet>
 

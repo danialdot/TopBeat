@@ -1,4 +1,6 @@
 # 🎧 TopBeat
+[![Cloudflare Pages](https://img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=brightgreen)](https://topbeat.pages.dev)
+
 
 Discover your 🔝 song and 🎤 artist with our music app! Connect your 🎧 Spotify account, and we'll show your most-played track. 💡 Stylish. Simple. Start listening! 🎶
 

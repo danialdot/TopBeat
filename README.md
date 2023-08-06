@@ -3,7 +3,7 @@
 
 [![Ghost](https://img.shields.io/badge/Ghost-000?style=for-the-badge&logo=ghost&logoColor=white)](https://ghost.danials.space/topbeat/)
 
-[![Cloudflare Pages](https://img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=darkcyan)](https://topbeat.pages.dev) [![License](https://img.shields.io/github/license/danialdot/TopBeat.svg)](https://opensource.org/licenses/sdf) [![Website shields.io](https://img.shields.io/website-up-down-lightgreen-red/https/topbeat.danials.space)](https://topbeat.danials.space) 
+[![Cloudflare Pages](https://img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=darkcyan)](https://topbeat.pages.dev) [![License](https://img.shields.io/github/license/danialdot/TopBeat.svg)](https://opensource.org/licenses/mit) [![Website shields.io](https://img.shields.io/website-up-down-lightgreen-red/https/topbeat.danials.space)](https://topbeat.danials.space) 
 
 
 # Screenshots:

@@ -1,5 +1,5 @@
 # 🎧 TopBeat
-[![Cloudflare Pages](https:/./screenshots/img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=brightgreen)](https://topbeat.pages.dev)
+[![Cloudflare Pages](https://img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=brightgreen)](https://topbeat.pages.dev)
 
 # Screenshots:
 <p float="left">

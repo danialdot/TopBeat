@@ -49,13 +49,10 @@ npm start
 Open your web browser and navigate to http://localhost:3000 to access TopBeat.
 
 ## 🛠️ Tech Stack
-React.js: Frontend UI library
-
-Spotify Web API: Fetching user's top tracks and artist information
-
-Material-UI: Icons for the iOS-style back button
-
-Local Storage: Caching the Spotify access token for future visits
+- React.js: Frontend UI library
+- Spotify Web API: Fetching user's top tracks and artist information
+- Material-UI: Icons for the iOS-style back button
+- Local Storage: Caching the Spotify access token for future visits
 
 ## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for details.

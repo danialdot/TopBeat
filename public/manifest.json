@@ -1,5 +1,5 @@
 {
-  "name": "TopBeat",
+  "name": "TopBeat - Discover your top song and artist",
   "short_name": "TopBeat",
   "start_url": "/",
   "display": "standalone",

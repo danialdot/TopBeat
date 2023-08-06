@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FaTwitter, FaGithub, FaMedium } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 import "./App.css";
@@ -40,6 +41,17 @@ const Footer = () => {
         <div className="footer-content">
           <footer>
             <button onClick={logout}>logout</button>
+            <div className="social-icons">
+              <a href="https://github.com/danialdot/TopBeat" className="social-link">
+                <FaGithub style={{ margin: "0 10px" }} size={24} />
+              </a>
+              <a href="https://medium.danials.space" className="social-link">
+                <FaMedium style={{ margin: "0 10px" }} size={24} />
+              </a>
+              <a href="https://twitter.com/DanialBaka" className="social-link">
+                <FaTwitter style={{ margin: "0 10px" }} size={24} />
+              </a>
+            </div>
           </footer>
         </div>
       )}

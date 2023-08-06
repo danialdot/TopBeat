@@ -46,6 +46,19 @@
   transform: scaleX(1);
 }
 
+.social-icons {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.social-link {
+  color: #e6e6e6;
+}
+
+.social-link:hover {
+  color: #fff;
+}
+
 .app-container {
   display: flex;
   justify-content: center;
@@ -152,8 +165,7 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   outline: none;
 }
 

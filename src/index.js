@@ -10,12 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HelmetProvider>
     <Helmet>
-      <meta property="og:title" content="TopBeat" />
-      <meta property="og:description" content="Discover your top song and artist" />
-      <meta property="og:image" content="https://topbeat.danials.space/og-image.jpg" />
-      <meta property="og:url" content="https://topbeat.danials.space" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <title>TopBeat</title>
+      <title>TopBeat - Discover your top song and artist</title>
     </Helmet>
 
     <React.StrictMode>

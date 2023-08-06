@@ -1,6 +1,13 @@
 # 🎧 TopBeat
-[![Cloudflare Pages](https://img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=brightgreen)](https://topbeat.pages.dev)
+[![Cloudflare Pages](https:/./screenshots/img.shields.io/static/v1?label=Cloudflare%20Pages&message=Deployed&color=brightgreen)](https://topbeat.pages.dev)
 
+# Screenshots:
+<p float="left">
+  <img src="./screenshots/img0.png" width="100" />
+  <img src="./screenshots/img1.png" width="100" />
+  <img src="./screenshots/img2.png" width="100" /> 
+  <img src="./screenshots/img3.png" width="100" />
+</p>
 
 Discover your 🔝 song and 🎤 artist with our music app! Connect your 🎧 Spotify account, and we'll show your most-played track. 💡 Stylish. Simple. Start listening! 🎶
 
@@ -35,4 +42,4 @@ Material-UI: Icons for the iOS-style back button
 Local Storage: Caching the Spotify access token for future visits
 
 ## 📝 License
-This project is licensed under the MIT License. See the LICENSE file for details.# TopBeat
+This project is licensed under the MIT License. See the LICENSE file for details.

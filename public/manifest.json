@@ -1,7 +1,7 @@
 {
   "name": "TopBeat - Discover your top song and artist",
   "short_name": "TopBeat",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#1d1d1d",
   "background_color": "#1d1d1d",

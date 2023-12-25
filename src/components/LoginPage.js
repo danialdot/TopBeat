@@ -17,17 +17,22 @@ const LoginPage = () => {
   };
 
   const authenticateSpotify = () => {
-    const scope = "user-top-read";
+    const scopes = [
+      'playlist-modify-private',
+      'playlist-modify-public',
+      'user-library-read',
+    ].join(',');
 
     const url = `https://accounts.spotify.com/authorize?${queryString.stringify({
       response_type: "token",
       client_id: clientId,
       redirect_uri: redirectUri,
-      scope,
+      scope: scopes,
     })}`;
 
     window.location.href = url;
   };
+
 
   React.useEffect(() => {
     const handleSpotifyRedirect = () => {
@@ -50,7 +55,7 @@ const LoginPage = () => {
   return (
     <div className="app-container">
       <div className="login-container">
-        <div class="app-description">
+        <div className="app-description">
           <h1>🎧 TopBeat</h1>
           <h2>Discover your top song and artist</h2>
           <p>Connect your Spotify account, and we'll show your most-played track.</p>

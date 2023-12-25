@@ -8,6 +8,7 @@ import "./App.css";
 import LoginPage from "./components/LoginPage";
 import SongPage from "./components/SongPage";
 import ArtistPage from "./components/ArtistPage";
+import CreateLikedPlaylistPage from "./components/CreateLikedPlaylistPage";
 import HomePage from "./components/HomePage";
 
 const Footer = () => {
@@ -68,6 +69,7 @@ const App = () => {
             <Route path="/" element={<LoginPage />} />
             <Route path="/song" element={<SongPage />} />
             <Route path="/artist" element={<ArtistPage />} />
+            <Route path="/playlist-liked-songs" element={<CreateLikedPlaylistPage />} />
             <Route path="/home" element={<HomePage />} />
           </Routes>
         </div>

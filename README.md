@@ -16,13 +16,23 @@
 
 # Screenshots:
 <p float="left">
-  <img src="./screenshots/img0.png" width="250" />
-  <img src="./screenshots/img1.png" width="250" />
-  <img src="./screenshots/img2.png" width="250" /> 
-  <img src="./screenshots/img3.png" width="250" />
+  <img src="./screenshots/v2/img0.png" width="250" />
+  <img src="./screenshots/v2/img1.png" width="250" />
+  <img src="./screenshots/v2/img2.png" width="250" /> 
+  <img src="./screenshots/v2/img3.png" width="250" />
+  <img src="./screenshots/v2/img4-0.png" width="250" />
+  <img src="./screenshots/v2/img4-1.png" width="250" />
+  <img src="./screenshots/v2/img4-2.png" width="250" />
+  <img src="./screenshots/v2/img4-3.png" width="250" />
 </p>
 
 Discover your 🔝 song and 🎤 artist with our music app! Connect your 🎧 Spotify account, and we'll show your most-played track. 💡 Stylish. Simple. Start listening! 🎶
+
+
+## ***✨ New Feature***
+### Generate Playlist from Liked Songs:
+TopBeat now offers the ability to create a Spotify playlist containing your liked songs, so you can share your favorite songs seamlessly.
+
 
 ## 🚀 Quick Start
 Clone the repository:

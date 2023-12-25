@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 - 
 
 ---
+
+## [2.0.1] - 2023-12-25
+
+### Added
+- implement generate playlist from liked songs
+
 ## [1.0.1] - 2023-08-03
 
 ### Added

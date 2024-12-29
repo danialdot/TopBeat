@@ -21,6 +21,8 @@ const LoginPage = () => {
       'playlist-modify-private',
       'playlist-modify-public',
       'user-library-read',
+      'user-top-read',
+      'user-follow-read',
     ].join(',');
 
     const url = `https://accounts.spotify.com/authorize?${queryString.stringify({

@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { ArrowBackIos } from "@mui/icons-material";
+import axios from "axios";
 
-const SongPage = () => {
+const ArtistPage = () => {
   const navigate = useNavigate();
   const [mostPlayedSong, setMostPlayedSong] = useState(null);
 
   const getTokenFromLocalStorage = () => {
     return localStorage.getItem("spotify_access_token");
   };
+
+  const deleteTokenFromLocalStorage = () => {
+    return localStorage.clear();
+  };
+
+  const logout = useCallback(() => {
+    deleteTokenFromLocalStorage();
+    navigate(0);
+  }, [navigate]);
 
   const getMostPlayedSong = async (accessToken) => {
     try {
@@ -45,16 +54,6 @@ const SongPage = () => {
     }
   }, [navigate]);
 
-  const deleteTokenFromLocalStorage = () => {
-    return localStorage.clear();
-  };
-
-  const logout = () => {
-    deleteTokenFromLocalStorage();
-    navigate(`/`);
-    navigate(0);
-  };
-
   return (
     <div>
       <button className="ios-back-button" onClick={() => navigate(-1)}>
@@ -74,4 +73,4 @@ const SongPage = () => {
   );
 };
 
-export default SongPage;
+export default ArtistPage;

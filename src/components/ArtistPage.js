@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowBackIos } from "@mui/icons-material";
-
 import axios from "axios";
 
 const ArtistPage = () => {
@@ -12,20 +11,26 @@ const ArtistPage = () => {
     return localStorage.getItem("spotify_access_token");
   };
 
+  const deleteTokenFromLocalStorage = () => {
+    return localStorage.clear();
+  };
+
+  const logout = () => {
+    deleteTokenFromLocalStorage();
+    navigate(0);
+  };
+
   const getMostPlayedArtist = async (accessToken) => {
     try {
-      const response = await axios.get(
-        "https://api.spotify.com/v1/me/top/artists",
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-          params: {
-            limit: 1,
-            time_range: "medium_term",
-          },
-        }
-      );
+      const response = await axios.get("https://api.spotify.com/v1/me/top/artists", {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        params: {
+          limit: 1,
+          time_range: "medium_term",
+        },
+      });
 
       if (response.data.items && response.data.items.length > 0) {
         const mostPlayed = response.data.items[0];
@@ -48,16 +53,6 @@ const ArtistPage = () => {
       navigate(`/`);
     }
   }, [navigate]);
-
-  const deleteTokenFromLocalStorage = () => {
-    return localStorage.clear();
-  };
-
-  const logout = () => {
-    deleteTokenFromLocalStorage();
-    navigate(`/`);
-    navigate(0);
-  };
 
   return (
     <div>

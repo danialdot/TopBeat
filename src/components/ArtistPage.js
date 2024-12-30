@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowBackIos } from "@mui/icons-material";
 import axios from "axios";
@@ -15,35 +15,38 @@ const ArtistPage = () => {
     return localStorage.clear();
   };
 
-  const logout = () => {
+  const logout = useCallback(() => {
     deleteTokenFromLocalStorage();
     navigate(0);
-  };
+  }, [navigate]);
 
-  const getMostPlayedArtist = async (accessToken) => {
-    try {
-      const response = await axios.get("https://api.spotify.com/v1/me/top/artists", {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-        params: {
-          limit: 1,
-          time_range: "medium_term",
-        },
-      });
+  const getMostPlayedArtist = useCallback(
+    async (accessToken) => {
+      try {
+        const response = await axios.get("https://api.spotify.com/v1/me/top/artists", {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+          params: {
+            limit: 1,
+            time_range: "medium_term",
+          },
+        });
 
-      if (response.data.items && response.data.items.length > 0) {
-        const mostPlayed = response.data.items[0];
-        setMostPlayedArtist(mostPlayed);
-      } else {
-        console.log("No top artists found for the user.");
+        if (response.data.items && response.data.items.length > 0) {
+          const mostPlayed = response.data.items[0];
+          setMostPlayedArtist(mostPlayed);
+        } else {
+          console.log("No top artists found for the user.");
+          logout();
+        }
+      } catch (error) {
+        console.error("Error fetching most played artist:", error);
         logout();
       }
-    } catch (error) {
-      console.error("Error fetching most played artist:", error);
-      logout();
-    }
-  };
+    },
+    [logout]
+  );
 
   React.useEffect(() => {
     const cachedToken = getTokenFromLocalStorage();
@@ -52,7 +55,7 @@ const ArtistPage = () => {
     } else {
       navigate(`/`);
     }
-  }, [navigate]);
+  }, [navigate, getMostPlayedArtist]);
 
   return (
     <div>

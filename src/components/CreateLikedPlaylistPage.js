@@ -143,7 +143,8 @@ const CreateLikedPlaylistPage = () => {
                 <div className="create-playlist-description">
                   <h1>Playlist Generator</h1>
                   {/* <p>Automatically generate a playlist from your liked songs on Spotify with one click.</p> */}
-                  <p>Want to share your Spotify liked songs? 🎶 </p>
+                  <p>Want to share your Spotify liked songs?</p>
+                  <br/>
                   {/* <p>Now you can create a playlist with all your liked tracks and share it effortlessly. ✨</p> */}
                   <p>Easily generate a playlist from all your liked songs with just one click, ready to share with anyone. ✨</p>
                 </div>

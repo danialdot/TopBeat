@@ -13,27 +13,26 @@ const SongPage = () => {
 
   const getMostPlayedSong = async (accessToken) => {
     try {
-      const response = await axios.get(
-        "https://api.spotify.com/v1/me/top/tracks",
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-          params: {
-            limit: 1,
-            time_range: "medium_term",
-          },
-        }
-      );
+      const response = await axios.get("https://api.spotify.com/v1/me/top/tracks", {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        params: {
+          limit: 1,
+          time_range: "medium_term",
+        },
+      });
 
       if (response.data.items && response.data.items.length > 0) {
         const mostPlayed = response.data.items[0];
         setMostPlayedSong(mostPlayed);
       } else {
         console.log("No top tracks found for the user.");
+        logout();
       }
     } catch (error) {
       console.error("Error fetching most played track:", error);
+      logout();
     }
   };
 
@@ -45,6 +44,16 @@ const SongPage = () => {
       navigate(`/`);
     }
   }, [navigate]);
+
+  const deleteTokenFromLocalStorage = () => {
+    return localStorage.clear();
+  };
+
+  const logout = () => {
+    deleteTokenFromLocalStorage();
+    navigate(`/`);
+    navigate(0);
+  };
 
   return (
     <div>

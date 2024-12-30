@@ -32,9 +32,11 @@ const ArtistPage = () => {
         setMostPlayedArtist(mostPlayed);
       } else {
         console.log("No top artists found for the user.");
+        logout();
       }
     } catch (error) {
       console.error("Error fetching most played artist:", error);
+      logout();
     }
   };
 
@@ -46,6 +48,16 @@ const ArtistPage = () => {
       navigate(`/`);
     }
   }, [navigate]);
+
+  const deleteTokenFromLocalStorage = () => {
+    return localStorage.clear();
+  };
+
+  const logout = () => {
+    deleteTokenFromLocalStorage();
+    navigate(`/`);
+    navigate(0);
+  };
 
   return (
     <div>

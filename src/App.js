@@ -49,7 +49,7 @@ const Footer = () => {
               <a href="https://medium.danials.space" className="social-link">
                 <FaMedium style={{ margin: "0 10px" }} size={24} />
               </a>
-              <a href="https://twitter.com/DanialBaka" className="social-link">
+              <a href="https://x.com/utsubyononeko" className="social-link">
                 <FaTwitter style={{ margin: "0 10px" }} size={24} />
               </a>
             </div>

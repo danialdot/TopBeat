@@ -1,0 +1,71 @@
+.terms-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 32px;
+  color: #ffffff;
+}
+
+.terms-header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  position: relative;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #1db954;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+}
+
+.back-button:hover {
+  color: #1ed760;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1db954;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #b3b3b3;
+}
+
+.scroll-content {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+.scroll-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-content::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 4px;
+}

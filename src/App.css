@@ -9,7 +9,7 @@
   left: 0;
   width: 100%;
   color: #fff;
-  padding: 10px 0;
+  padding: 10px 0px 40px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,8 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
   outline: none;
 }
 
@@ -211,7 +212,8 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
   outline: none;
 }
 

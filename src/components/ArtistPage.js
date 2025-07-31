@@ -74,6 +74,13 @@ const ArtistPage = () => {
     // Only re-fetch when artistCount changes
   }, [navigate, getTopArtists, artistCount]);
 
+  // Handler to open artist's Spotify link in a new tab
+  const handleArtistClick = (spotifyUrl) => {
+    if (spotifyUrl) {
+      window.open(spotifyUrl, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div>
       <button className="ios-back-button" onClick={() => navigate(-1)}>
@@ -102,7 +109,24 @@ const ArtistPage = () => {
                     flexDirection: "column",
                     alignItems: "center",
                     minWidth: 160,
+                    cursor:
+                      artist.external_urls && artist.external_urls.spotify
+                        ? "pointer"
+                        : "default",
+                    transition: "box-shadow 0.2s",
                   }}
+                  onClick={() =>
+                    handleArtistClick(
+                      artist.external_urls && artist.external_urls.spotify
+                        ? artist.external_urls.spotify
+                        : null
+                    )
+                  }
+                  title={
+                    artist.external_urls && artist.external_urls.spotify
+                      ? "Open in Spotify"
+                      : undefined
+                  }
                 >
                   <img
                     src={

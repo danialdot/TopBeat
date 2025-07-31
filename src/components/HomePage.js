@@ -27,12 +27,12 @@ const HomePage = () => {
   return (
     <div className="app-container">
       <div className="home-container">
-        <button onClick={navigateToArtistPage}>🎤 Top 1 Artist</button>
+        <button onClick={navigateToArtistPage}>🎤 Your Top Artist</button>
         <button onClick={navigateTo5ArtistPage}>🎤 Top 5 Artists</button>
-        <button onClick={navigateToSongPage}>🎵 Top 1 Song</button>
-        <button onClick={navigateTo5SongPage}>🎵 Top 5 Song</button>
+        <button onClick={navigateToSongPage}>🎵 Your Top Song</button>
+        <button onClick={navigateTo5SongPage}>🎵 Top 5 Songs</button>
         <button onClick={navigateToCreatePlaylistPage}>
-          💖 Liked Songs Playlist
+          ✨ Liked Songs Playlist
         </button>
       </div>
     </div>

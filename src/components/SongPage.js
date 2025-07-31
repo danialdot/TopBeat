@@ -90,6 +90,13 @@ const SongPage = () => {
     // Only re-fetch when songCount changes
   }, [navigate, getTopSongs, songCount]);
 
+  // Handler to open Spotify link in a new tab
+  const handleOpenSpotify = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div>
       <button className="ios-back-button" onClick={() => navigate(-1)}>
@@ -118,7 +125,21 @@ const SongPage = () => {
                     flexDirection: "column",
                     alignItems: "center",
                     minWidth: 160,
+                    cursor:
+                      song.external_urls && song.external_urls.spotify
+                        ? "pointer"
+                        : "default",
                   }}
+                  onClick={() =>
+                    handleOpenSpotify(
+                      song.external_urls && song.external_urls.spotify
+                    )
+                  }
+                  title={
+                    song.external_urls && song.external_urls.spotify
+                      ? "Open in Spotify"
+                      : ""
+                  }
                 >
                   <img
                     src={

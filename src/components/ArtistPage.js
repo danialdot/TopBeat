@@ -4,22 +4,22 @@ import { ArrowBackIos } from "@mui/icons-material";
 import truncate from "./truncate";
 import axios from "axios";
 
-// Helper to truncate artist names (array of objects with .name)
-const truncateArtist = (artists, max) => {
-  if (!artists || artists.length === 0) return "";
-  const names = artists.map((a) => a.name);
-  let result = "";
-  for (let i = 0; i < names.length; i++) {
-    const next = result ? result + ", " + names[i] : names[i];
-    if (next.length > max) {
-      if (result) return result + "…";
-      // If even the first artist is too long, truncate it
-      return truncate(names[i], max);
-    }
-    result = next;
-  }
-  return result;
-};
+// // Helper to truncate artist names (array of objects with .name)
+// const truncateArtist = (artists, max) => {
+//   if (!artists || artists.length === 0) return "";
+//   const names = artists.map((a) => a.name);
+//   let result = "";
+//   for (let i = 0; i < names.length; i++) {
+//     const next = result ? result + ", " + names[i] : names[i];
+//     if (next.length > max) {
+//       if (result) return result + "…";
+//       // If even the first artist is too long, truncate it
+//       return truncate(names[i], max);
+//     }
+//     result = next;
+//   }
+//   return result;
+// };
 
 const ArtistPage = () => {
   const navigate = useNavigate();

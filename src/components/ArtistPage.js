@@ -1,8 +1,25 @@
 import React, { useState, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowBackIos } from "@mui/icons-material";
-import axios from "axios";
 import truncate from "./truncate";
+import axios from "axios";
+
+// Helper to truncate artist names (array of objects with .name)
+const truncateArtist = (artists, max) => {
+  if (!artists || artists.length === 0) return "";
+  const names = artists.map((a) => a.name);
+  let result = "";
+  for (let i = 0; i < names.length; i++) {
+    const next = result ? result + ", " + names[i] : names[i];
+    if (next.length > max) {
+      if (result) return result + "…";
+      // If even the first artist is too long, truncate it
+      return truncate(names[i], max);
+    }
+    result = next;
+  }
+  return result;
+};
 
 const ArtistPage = () => {
   const navigate = useNavigate();
@@ -75,30 +92,101 @@ const ArtistPage = () => {
   }, [navigate, getTopArtists, artistCount]);
 
   // Handler to open artist's Spotify link in a new tab
-  const handleArtistClick = (spotifyUrl) => {
-    if (spotifyUrl) {
-      window.open(spotifyUrl, "_blank", "noopener,noreferrer");
+  const handleOpenSpotify = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
     }
   };
 
+  // Responsive: detect mobile
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 600;
+
+  // Outer wrapper to center everything
   return (
-    <div>
-      <button className="ios-back-button" onClick={() => navigate(-1)}>
+    <div
+      style={{
+        minHeight: "100vh",
+        minWidth: "100vw",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+      }}
+    >
+      <button
+        className="ios-back-button"
+        onClick={() => navigate(-1)}
+        style={{
+          position: "absolute",
+          top: isMobile ? 8 : 16,
+          left: isMobile ? 8 : 16,
+          background: "rgba(255,255,255,0.8)",
+          border: "none",
+          borderRadius: 8,
+          padding: 6,
+          cursor: "pointer",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+          zIndex: 10,
+        }}
+      >
         <ArrowBackIos fontSize="small" />
       </button>
-      <div className="app-container">
-        {loading && <div>Loading...</div>}
+      <div
+        className="app-container"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: loading ? "center" : "flex-start",
+          paddingTop: isMobile ? 56 : 64,
+          width: "100vw",
+          boxSizing: "border-box",
+        }}
+      >
+        {" "}
+        {loading && (
+          <div style={{ textAlign: "center", fontSize: 18, marginTop: 40 }}>
+            Loading...
+          </div>
+        )}
         {!loading && topArtists.length > 0 && (
-          <div className="artist-page-container">
-            <h2>
-              Your Top {artistCount} Artist{artistCount > 1 ? "s" : ""}
+          <div
+            className="song-page-container"
+            style={{
+              width: "100%",
+              maxWidth: 800,
+              margin: isMobile ? "0" : "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h2
+              style={{
+                textAlign: "center",
+                fontWeight: 700,
+                fontSize: isMobile ? 20 : 26,
+                margin: "32px 0 24px 0",
+                letterSpacing: 0.5,
+                textShadow: "0 2px 8px rgba(0,0,0,0.07)",
+                wordBreak: "break-word",
+              }}
+            >
+              {artistCount === 1
+                ? "Your Most Played Artist:"
+                : `Your Top ${artistCount} Artist${artistCount > 1 ? "s" : ""}`}
             </h2>
             <div
               style={{
                 display: "flex",
                 flexWrap: "wrap",
-                gap: 24,
+                gap: isMobile ? 8 : 32,
                 justifyContent: "center",
+                alignItems: "flex-start",
+                paddingBottom: isMobile ? 16 : 0,
               }}
             >
               {topArtists.map((artist, idx) => (
@@ -108,24 +196,26 @@ const ArtistPage = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    minWidth: 160,
+                    minWidth: 180,
+                    maxWidth: 220,
+                    width: "auto",
+                    padding: 20,
+                    margin: 0,
                     cursor:
                       artist.external_urls && artist.external_urls.spotify
                         ? "pointer"
                         : "default",
-                    transition: "box-shadow 0.2s",
+                    transition: "transform 0.12s",
                   }}
                   onClick={() =>
-                    handleArtistClick(
+                    handleOpenSpotify(
                       artist.external_urls && artist.external_urls.spotify
-                        ? artist.external_urls.spotify
-                        : null
                     )
                   }
                   title={
                     artist.external_urls && artist.external_urls.spotify
                       ? "Open in Spotify"
-                      : undefined
+                      : ""
                   }
                 >
                   <img
@@ -136,32 +226,75 @@ const ArtistPage = () => {
                     }
                     alt={artist.name}
                     style={{
-                      width: 120,
-                      height: 120,
-                      borderRadius: "50%",
+                      width: isMobile ? 140 : 160,
+                      height: isMobile ? 140 : 160,
+                      borderRadius: 14,
                       objectFit: "cover",
-                      marginBottom: 8,
+                      marginBottom: 10,
                     }}
                   />
-                  <h3 style={{ margin: "8px 0 4px 0" }}>
-                    {idx + 1}. {truncate(artist.name, 12)}
+                  <h3
+                    style={{
+                      margin: "10px 0 6px 0",
+                      fontSize: isMobile ? 15 : 20,
+                      fontWeight: 600,
+                      textAlign: "center",
+                      color: "#222",
+                      lineHeight: 1.2,
+                      letterSpacing: 0.2,
+                      wordBreak: "break-word",
+                    }}
+                  >
+                    {!(artistCount === 1 && idx === 0) && (
+                      <span
+                        style={{
+                          color: "#1db954",
+                          fontWeight: 700,
+                          marginRight: 4,
+                        }}
+                      >
+                        {idx + 1}.
+                      </span>
+                    )}
+                    {truncate(artist.name, isMobile ? 12 : 16)}
                   </h3>
-                  <p style={{ margin: 0, fontSize: 14 }}>
+                  {/* <p
+                    style={{
+                      margin: 0,
+                      fontSize: isMobile ? 12 : 15,
+                      color: "#555",
+                      textAlign: "center",
+                      fontWeight: 500,
+                      wordBreak: "break-word",
+                    }}
+                  >
+                    {truncateArtist(
+                      artist.genres
+                        ? artist.genres.map((g) => ({ name: g }))
+                        : [],
+                      isMobile ? 14 : 18
+                    )}
+                  </p> */}
+                  <p
+                    style={{
+                      margin: "4px 0 0 0",
+                      fontSize: isMobile ? 11 : 13,
+                      color: "#888",
+                      textAlign: "center",
+                      wordBreak: "break-word",
+                    }}
+                  >
                     Popularity: {artist.popularity}
                   </p>
-                  {/* Example for album name truncation if album info is available */}
-                  {artist.album && artist.album.name && (
-                    <p style={{ margin: 0, fontSize: 13 }}>
-                      Album: {truncate(artist.album.name, 12)}
-                    </p>
-                  )}
                 </div>
               ))}
             </div>
           </div>
         )}
         {!loading && topArtists.length === 0 && (
-          <div>No top artists found.</div>
+          <div style={{ textAlign: "center", fontSize: 18, marginTop: 40 }}>
+            No top artists found.
+          </div>
         )}
       </div>
     </div>

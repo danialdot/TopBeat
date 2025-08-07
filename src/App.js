@@ -66,6 +66,17 @@ const Footer = () => {
 };
 
 const TermsAndPolicy = () => {
+  // Use explicit color values instead of "inherit"
+  const defaultColor = "#ffffff";
+  const hoverColor = "gray";
+  const activeColor = "white";
+
+  // Helper to handle color changes
+  const handleMouseOver = (e) => (e.target.style.color = hoverColor);
+  const handleMouseOut = (e) => (e.target.style.color = defaultColor);
+  const handleMouseDown = (e) => (e.target.style.color = activeColor);
+  const handleMouseUp = (e) => (e.target.style.color = hoverColor);
+
   return (
     <div
       className="terms-policy-container"
@@ -82,13 +93,13 @@ const TermsAndPolicy = () => {
         href="/terms"
         style={{
           padding: "10px",
-          color: "inherit",
+          color: defaultColor,
           textDecoration: "none",
         }}
-        onMouseOver={(e) => (e.target.style.color = "gray")}
-        onMouseOut={(e) => (e.target.style.color = "inherit")}
-        onMouseDown={(e) => (e.target.style.color = "white")}
-        onMouseUp={(e) => (e.target.style.color = "gray")}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
       >
         Terms of Service
       </a>
@@ -97,13 +108,13 @@ const TermsAndPolicy = () => {
         href="/policy"
         style={{
           padding: "10px",
-          color: "inherit",
+          color: defaultColor,
           textDecoration: "none",
         }}
-        onMouseOver={(e) => (e.target.style.color = "gray")}
-        onMouseOut={(e) => (e.target.style.color = "inherit")}
-        onMouseDown={(e) => (e.target.style.color = "white")}
-        onMouseUp={(e) => (e.target.style.color = "gray")}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
       >
         Privacy Policy
       </a>

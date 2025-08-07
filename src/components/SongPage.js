@@ -238,7 +238,7 @@ const SongPage = () => {
                       fontSize: isMobile ? 15 : 20,
                       fontWeight: 600,
                       textAlign: "center",
-                      color: "#222",
+                      color: "#ffffff",
                       lineHeight: 1.2,
                       letterSpacing: 0.2,
                       wordBreak: "break-word",
@@ -261,7 +261,7 @@ const SongPage = () => {
                     style={{
                       margin: 0,
                       fontSize: isMobile ? 12 : 15,
-                      color: "#555",
+                      color: "#888",
                       textAlign: "center",
                       fontWeight: 500,
                       wordBreak: "break-word",

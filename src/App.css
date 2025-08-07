@@ -1,263 +1,267 @@
 .app {
-  background-color: #1d1d1d;
-  font-family: "Montserrat", sans-serif;
+    background-color: #1d1d1d !important;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 .footer-content {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  padding: 10px 0px 40px 0px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    color: #fff !important;
+    padding: 10px 0px 40px 0px !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
 .footer-content button {
-  background-color: transparent;
-  color: white;
-  border: 0;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  text-decoration: none;
+    background-color: transparent !important;
+    color: white !important;
+    border: 0 !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    position: relative !important;
+    text-decoration: none !important;
 }
 
 .footer-content button::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #1db954;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+    content: "" !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: #1db954 !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    transition: transform 0.3s ease !important;
 }
 
 .footer-content button:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1) !important;
 }
 
 .social-icons {
-  padding-top: 15px;
-  padding-bottom: 5px;
+    padding-top: 15px !important;
+    padding-bottom: 5px !important;
 }
 
 .social-link {
-  color: #e6e6e6;
+    color: #e6e6e6 !important;
 }
 
 .social-link:hover {
-  color: #fff;
+    color: #fff !important;
 }
 
 .app-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #1d1d1d;
-  color: #fff;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh !important;
+    background-color: #1d1d1d !important;
+    color: #fff !important;
 }
 
 .most-played-container {
-  text-align: center;
+    text-align: center !important;
 }
 
 .most-played-container img {
-  width: 200px;
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
+    width: 200px !important;
+    height: 200px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 5px !important;
 }
 
 h2,
 h3,
 p,
 button {
-  margin: 10px;
+    margin: 10px !important;
 }
 
 .login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 .login-container button {
-  background-color: #1db954;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 2px solid #1db954;
-  margin-top: 20px;
+    background-color: #1db954 !important;
+    color: #fff !important;
+    font-size: 1.2rem !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    border: 2px solid #1db954 !important;
+    margin-top: 20px !important;
 }
 
 .login-container button:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .app-description {
-  text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #1d1d1d;
-  color: #fff;
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
+    text-align: center !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    background-color: #1d1d1d !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 .ios-back-button {
-  position: absolute;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: #1d1d1d;
-  color: #e6e6e6;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+    position: absolute !important;
+    padding: 8px 12px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background-color: #1d1d1d !important;
+    color: #e6e6e6 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
 }
 
 .ios-back-button:hover {
-  color: #ffffff;
+    color: #ffffff !important;
 }
 
 .app-description h1 {
-  font-size: 32px;
-  font-weight: bold;
+    font-size: 32px !important;
+    font-weight: bold !important;
 }
 
 .app-description h2 {
-  font-size: 24px;
-  font-weight: 700;
+    font-size: 24px !important;
+    font-weight: 700 !important;
 }
 
 .app-description p {
-  font-size: 16px;
-  margin-bottom: 10px;
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
 }
 
 .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 .home-container button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-  outline: none;
+    background-color: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+    outline: none !important;
 }
 
 .home-container button:hover {
-  background-color: white;
-  color: #1d1d1d;
-  transform: scale(1.1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white !important;
+    color: #1d1d1d !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .artist-page-container {
-  text-align: center;
+    text-align: center !important;
 }
 
 .artist-page-container img {
-  width: 200px;
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
+    width: 200px !important;
+    height: 200px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 5px !important;
 }
 
 .artist-page-container h3 {
-  font-size: 1.5rem;
-  margin-top: 10px;
+    font-size: 1.5rem !important;
+    margin-top: 10px !important;
 }
 
 .artist-page-container p {
-  font-size: 1.2rem;
-  margin-top: 5px;
+    font-size: 1.2rem !important;
+    margin-top: 5px !important;
 }
 
 .create-playlist-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 .create-playlist-container button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-  outline: none;
+    background-color: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+    outline: none !important;
 }
 
 .create-playlist-container button:hover {
-  background-color: white;
-  color: #1d1d1d;
-  transform: scale(1.1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white !important;
+    color: #1d1d1d !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .playlist-track-container {
-  text-align: center;
+    text-align: center !important;
 }
 
 .playlist-track-container img {
-  width: 200px;
-  height: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
+    width: 200px !important;
+    height: 200px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 5px !important;
 }
 
 .create-playlist-description {
-  text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #1d1d1d;
-  color: #fff;
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
+    text-align: center !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    background-color: #1d1d1d !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 .create-playlist-description h1 {
-  font-size: 32px;
-  font-weight: bold;
+    font-size: 32px !important;
+    font-weight: bold !important;
 }
 
 .create-playlist-description h2 {
-  font-size: 24px;
-  font-weight: 700;
+    font-size: 24px !important;
+    font-weight: 700 !important;
 }
 
 .create-playlist-description p {
-  font-size: 16px;
-  margin-bottom: 10px;
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
 }
